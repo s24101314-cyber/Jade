@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lovely Country - Showcase by 陳子傑</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            /* Using the Philippine Map Flag as background with a dark overlay for text readability */
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('pilipinmap.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.5rem;
+        }
+
+        /* Distinct Photo Box Formats */
+        .photo-box-primary {
+            background: rgba(30, 58, 138, 0.4);
+            border-left: 8px solid #fbbf24;
+            border-radius: 1rem;
+            padding: 20px;
+        }
+
+        .photo-box-secondary {
+            background: rgba(153, 27, 27, 0.4);
+            border-right: 8px solid #fbbf24;
+            border-radius: 1rem;
+            padding: 20px;
+        }
+
+        /* Dropdown Menu (Requirement #4) */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Animation (Requirement #1) */
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255,255,255,0.2);
+            }
+
+            50% {
+                text-shadow: 0 0 25px #fbbf24;
+            }
+        }
+
+        .animate-glow {
+            animation: glow 3s infinite;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <nav class="max-w-6xl mx-auto flex justify-between items-center py-6 mb-4">
+        <div class="text-2xl font-bold tracking-tighter">陳子傑 <span class="text-yellow-400">| Project</span></div>
+        <div class="relative dropdown">
+            <button class="bg-blue-600 px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">Explore ▾</button>
+            <ul class="dropdown-menu absolute hidden text-gray-800 bg-white rounded-lg shadow-xl mt-2 w-48 overflow-hidden z-50 right-0">
+                <li><a href="#profile" class="block px-4 py-2 hover:bg-gray-100">About Creator</a></li>
+                <li><a href="#media" class="block px-4 py-2 hover:bg-gray-100">Audio/Video</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto mb-8">
+        <marquee class="bg-yellow-400 text-blue-900 font-bold py-3 rounded-lg uppercase tracking-widest shadow-lg">
+            Mabuhay! Welcome to the Camotes Islands, Cebu • The Pearl of the Orient • Explore 7,641 Islands
+        </marquee>
+    </div>
+
+    <header class="max-w-6xl mx-auto text-center mb-12 py-10">
+        <h1 class="text-5xl md:text-7xl font-black animate-glow uppercase leading-tight">
+            My Lovely Country<br>
+            <span class="text-3xl md:text-5xl text-yellow-400">"Camotes, Cebu, Philippines"</span>
+        </h1>
+        <p class="text-xl text-blue-300 mt-4">A Showcase by 陳子傑</p>
+    </header>
+
+    <section id="profile" class="max-w-4xl mx-auto glass-card p-8 mb-10">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-yellow-400 shadow-2xl flex-shrink-0">
+                <img src="profile.jpg.jpg" alt="陳子傑 Headshot" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-yellow-400 mb-2">Creator: 陳子傑</h2>
+                <p class="text-gray-200 leading-relaxed text-lg">
+                    I am a student currently conducting my studies in Taiwan. This webpage is part of my final practical test, focusing on the beauty of my hometown in Camotes, Cebu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto space-y-8 mb-16">
+        <div class="photo-box-primary shadow-xl">
+            <h3 class="text-xl font-bold text-yellow-400 mb-4 uppercase tracking-wider italic underline">Gallery Format A: Coastal Scenery</h3>
+            <div class="rounded-xl overflow-hidden border-2 border-white/20">
+                <img src="photo1.jpg" alt="Camotes Photo 1" class="w-full h-auto max-h-96 object-cover">
+            </div>
+            <p class="mt-4 text-sm text-blue-100">A stunning view of the white sand shorelines in Camotes Islands.</p>
+        </div>
+
+        <div class="photo-box-secondary shadow-xl">
+            <h3 class="text-xl font-bold text-yellow-400 mb-4 uppercase tracking-wider italic underline">Gallery Format B: Island Exploration</h3>
+            <div class="rounded-xl overflow-hidden border-2 border-white/20">
+                <img src="photo2.jpg" alt="Camotes Photo 2" class="w-full h-auto max-h-96 object-cover">
+            </div>
+            <p class="mt-4 text-sm text-blue-100 text-right">Discovering the hidden natural gems and caves of Cebu.</p>
+        </div>
+    </section>
+
+    <section id="media" class="max-w-4xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-6 border-b-4 border-blue-500">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><span>🎵</span> Island Ambience (Audio)</h3>
+            <audio controls class="w-full">
+                <source src="aylabsibo.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="glass-card p-6 border-b-4 border-red-500">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><span>🎥</span> Travel Highlights (Video)</h3>
+            <video controls class="w-full rounded-lg">
+                <source src="camotes.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto mb-16">
+        <table class="w-full glass-card border-collapse overflow-hidden mb-8">
+            <thead class="bg-blue-900">
+                <tr>
+                    <th class="p-4 border border-white/10 text-yellow-400">Destination</th>
+                    <th class="p-4 border border-white/10 text-yellow-400">Activity</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr><td class="p-4 border border-white/10">Santiago Bay</td><td class="p-4 border border-white/10">Swimming</td></tr>
+                <tr class="bg-white/5"><td class="p-4 border border-white/10">Timubo Cave</td><td class="p-4 border border-white/10">Cave Diving</td></tr>
+            </tbody>
+        </table>
+
+        <details class="glass-card p-4 cursor-pointer hover:bg-white/20 transition">
+            <summary class="font-bold text-yellow-400">Click for Philippine Fun Fact</summary>
+            <p class="mt-2 text-blue-200">The Philippines is known as the "Social Media Capital of the World."</p>
+        </details>
+    </section>
+
+    <footer class="text-center pb-12 border-t border-white/10 pt-8">
+        <p class="text-gray-400">Final Practical Exam • Week 18 • Thursday, January 8, 2026 • Submission by 陳子傑</p>
+    </footer>
+
+</body>
+</html>
